@@ -82,11 +82,10 @@ body::before{
   background:transparent;   /* clean look */
   overflow:hidden;   /* prevents spill */
 }
+
 .nav-brand-slot img{
-  height:600px;     /* 🔥 FIX SIZE */
-  width:600px;
-  object-fit:contain;
-  display:block;
+  height:320px;
+  width:auto;
 }
 
 /* RIGHT: years badge */
@@ -153,15 +152,23 @@ body::before{
   .yb-num{font-size:1.25rem;}
   .nav-brand-slot{min-width:160px;height:52px;}
 }
-@media(max-width: 991px){
-  .vinayagar-wrapper{
-    right: 0;
-    top: -30px;
-    opacity: 0.25; /* subtle background feel */
+@media(max-width:767px){
+  .vinayagar-hanging{
+    top: auto;
+    bottom: 10px;   /* 👈 move to bottom */
+    right: 10%;
+    transform: translateX(50%);
   }
 
-  .vinayagar-img{
-    max-height: 260px;
+  .vinayagar-hanging img{
+    height: 140px;  /* smaller */
+    opacity: 0.9;   /* optional clean look */
+  }
+}
+
+@media(max-width:767px){
+  .nav-brand-slot img{
+    height:90px;
   }
 }
 /* ═══════════════════════════════════════════════════
